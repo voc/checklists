@@ -1,5 +1,5 @@
 % vim: ft=tex
-\documentclass[10pt, a5paper]{article}
+\documentclass[10pt, a5paper]{standalone}
 
 \usepackage{booktabs}% def toprule, midrule and etc.
 \usepackage[a5paper]{geometry}
