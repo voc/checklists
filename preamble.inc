@@ -1,17 +1,16 @@
 % vim: ft=tex
-\documentclass[10pt, a5paper]{standalone}
+\documentclass[10pt]{article}
 
 \usepackage{booktabs}% def toprule, midrule and etc.
-\usepackage[a5paper]{geometry}
-\usepackage[cm]{fullpage}
+\usepackage[a4paper, twocolumn]{geometry}
+\geometry{vmargin=2cm, hmargin=0cm}
 \usepackage{tikz}
 \usepackage{environ}
 \usepackage{fancyhdr}
-\usepackage{amssymb}
 
 \pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
+\fancyhead[C]{\LARGE{Klarliste D-EDFY}}
+\fancyfoot[C]{\thepage}  
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -36,10 +35,10 @@
 % command.
 \newenvironment{checklist}[1]{%
   \renewcommand{\item}[2]{%
-    ##1\hspace{2em}\dotfill\makebox{\uppercase{##2}}\\
+    ##1\dotfill\makebox{\uppercase{##2}}\\
   }
   \newcommand{\step}[1]{%
-    \hspace*{2em}-\hspace*{\labelsep}##1\\
+    \hspace*{0.5em}-\hspace*{\labelsep}##1\\
   }
   \begin{tabular}{p{0.8\linewidth}}
      \toprule
