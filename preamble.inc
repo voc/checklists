@@ -3,14 +3,17 @@
 
 \usepackage{booktabs}% def toprule, midrule and etc.
 \usepackage[a4paper, twocolumn]{geometry}
-\geometry{vmargin=2cm, hmargin=0cm}
+\geometry{vmargin=2.5cm, hmargin=0.5cm}
 \usepackage{tikz}
 \usepackage{environ}
 \usepackage{fancyhdr}
 
+
+
 \pagestyle{fancy}
-\fancyhead[C]{\LARGE{Klarliste D-EDFY}}
+\renewcommand{\title}[1]{\fancyhead[C]{\textbf{\LARGE{ #1 }}}}
 \fancyfoot[C]{\thepage}  
+
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
