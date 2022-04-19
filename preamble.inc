@@ -7,8 +7,7 @@
 \usepackage{tikz}
 \usepackage{environ}
 \usepackage{fancyhdr}
-
-
+\usepackage{xcolor,colortbl}
 
 \pagestyle{fancy}
 \renewcommand{\title}[1]{\fancyhead[C]{\textbf{\LARGE{ #1 }}}}
@@ -38,13 +37,13 @@
 % command.
 \newenvironment{checklist}[1]{%
   \renewcommand{\item}[2]{%
+    %\textbf{##1}\dotfill\makebox{\textbf{\uppercase{##2}}}\\
     ##1\dotfill\makebox{\uppercase{##2}}\\
   }
   \newcommand{\step}[1]{%
     \hspace*{0.5em}-\hspace*{\labelsep}##1\\
   }
   \begin{tabular}{p{0.8\linewidth}}
-     \toprule
-       \multicolumn{1}{c}{\textbf{\uppercase{#1}}}\\
-     \midrule
-}{\bottomrule\end{tabular}\vspace{1em}}
+       \multicolumn{1}{c}{\cellcolor{black!75}\color{white}\textbf{\uppercase{#1}}}\\
+       \vspace{0.25em}
+}{\end{tabular}\vspace{1em}}
