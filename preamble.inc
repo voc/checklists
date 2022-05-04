@@ -1,9 +1,17 @@
 % vim: ft=tex
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
+%\usepackage{lmodern}
+
+\usepackage{cuprum}
+\usepackage[T1]{fontenc}
+
+\usepackage{multirow}
 
 \usepackage{booktabs}% def toprule, midrule and etc.
+%\usepackage[a5paper, twocolumn]{geometry}
 \usepackage[a4paper, twocolumn]{geometry}
-\geometry{vmargin=2.5cm, hmargin=0.5cm}
+%\usepackage[a6paper]{geometry}
+\geometry{vmargin=2cm, hmargin=0.2cm}
 \usepackage{tikz}
 \usepackage{environ}
 \usepackage{fancyhdr}
@@ -11,7 +19,7 @@
 
 \pagestyle{fancy}
 \renewcommand{\title}[1]{\fancyhead[C]{\textbf{\LARGE{ #1 }}}}
-\fancyfoot[C]{\thepage}  
+\fancyfoot[C]{\tiny Achtung! Diese Checkliste entbindet nicht von der Verpflichtung, die im Flughandbuch veröffentlichten Betriebs und Notverfahren zu befolgen.}  
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -40,8 +48,17 @@
     %\textbf{##1}\dotfill\makebox{\textbf{\uppercase{##2}}}\\
     ##1\dotfill\makebox{\uppercase{##2}}\\
   }
+  \newcommand{\hint}[1]{%
+    \small\hspace*{0.8em}##1\\
+  }
+  
+  \newcommand{\decision}[1]{%
+    \textbf{##1}\\
+  }
+  \newcommand\vertbar{\kern1pt\rule[-\dp\strutbox]{.8pt}{\baselineskip}\kern1pt}
+  
   \newcommand{\step}[1]{%
-    \hspace*{0.5em}-\hspace*{\labelsep}##1\\
+    \hspace*{0.5em}\vertbar\hspace*{\labelsep}##1\\
   }
   \begin{tabular}{p{0.8\linewidth}}
        \multicolumn{1}{c}{\cellcolor{black!75}\color{white}\textbf{\uppercase{#1}}}\\
