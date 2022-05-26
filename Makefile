@@ -12,12 +12,19 @@ prepare_directories:
 	mkdir -p $(OUTPUT_DIR)
 
 compile: $(SOURCES)
-	@echo Building $^ from source
-	xelatex -output-dir=$(BUILD_DIR) $^
-
+	@for i in $(SOURCES); do \
+        echo Building $$i from source && \
+		xelatex -output-dir=$(BUILD_DIR) $$i; \
+    done
+	
 publish:
 	mv $(BUILD_DIR)/*.pdf $(OUTPUT_DIR)
 
 cleanup:
 	@echo Removing $(BUILD_DIR)
 	rm -rf $(BUILD_DIR)
+
+list_sources:
+	@for i in $(SOURCES); do \
+        echo $$i; \
+    done

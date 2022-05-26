@@ -1,5 +1,18 @@
 % vim: ft=tex
-\documentclass[12pt]{article}
+\if\papersize4
+  \documentclass[12pt]{article}
+  \usepackage[a4paper, twocolumn]{geometry}
+  \geometry{vmargin=2cm, hmargin=0.2cm}
+\fi
+\if\papersize5
+\usepackage[a5paper, twocolumn]{geometry}
+\fi
+\if\papersize6
+  \documentclass[10pt]{article}
+  \usepackage[a6paper]{geometry}
+  %\geometry{hmargin=0.2cm}
+\fi
+
 %\usepackage{lmodern}
 
 \usepackage{cuprum}
@@ -8,10 +21,9 @@
 \usepackage{multirow}
 
 \usepackage{booktabs}% def toprule, midrule and etc.
-%\usepackage[a5paper, twocolumn]{geometry}
-\usepackage[a4paper, twocolumn]{geometry}
-%\usepackage[a6paper]{geometry}
-\geometry{vmargin=2cm, hmargin=0.2cm}
+
+
+
 \usepackage{tikz}
 \usepackage{environ}
 \usepackage{fancyhdr}
@@ -19,7 +31,6 @@
 
 \pagestyle{fancy}
 \renewcommand{\title}[1]{\fancyhead[C]{\textbf{\LARGE{ #1 }}}}
-\fancyfoot[C]{\tiny Achtung! Diese Checkliste entbindet nicht von der Verpflichtung, die im Flughandbuch veröffentlichten Betriebs und Notverfahren zu befolgen.}  
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
