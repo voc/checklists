@@ -1,6 +1,8 @@
+\def\papersize{4}
 \input{preamble.inc}
 
 \begin{document}
+
 
 \title{Klarliste D-ERFH}
 
@@ -13,7 +15,7 @@
     \item{Brandhahn}{auf}
     \item{Vergaservorwärmung}{aus}
     \item{Leistungshebel}{leerlauf}
-    \item{Propeller}{max. rmp}
+    \item{Propeller}{max. rpm}
     \item{Avionik}{aus}
     \item{Hauptschalter}{ein}
     \item{Warnleuchten}{prüfen}
@@ -62,6 +64,7 @@
 
 \begin{task}
   \begin{checklist}{Abbremsen}
+    \item{Triebwerksinstrumente}{GRÜN}
     \item{Parkbremse}{gesetzt}
     \item{Drehzahl}{1800 RPM}
     \item{Magnete}{PRÜFEN}
@@ -112,7 +115,7 @@
       \multicolumn{2}{c}{75\%} &
       \multicolumn{2}{c}{85\%} &
       \multicolumn{2}{c}{95\%} \\ \cmidrule(r){1-2}
-    ft    & °C & MP   & RPM & MP   & RPM & MP   & RPM & MP   & RPM & MP   & RPM \\
+    ft    & $^{\circ}$C & MP   & RPM & MP   & RPM & MP   & RPM & MP   & RPM & MP   & RPM \\
     0     & 15 & 24,7 & 19  & 25,3 & 21  & 26,3 & 22  & 27,7 & 23  & 28,0 & 24  \\\hline
     2000  & 11 & 24,0 & 19  & 24,7 & 21  & 25,7 & 22  & 27,0 & 23  & 27,7 & 24  \\\hline
     4000  & 7  & 23,3 & 19  & 24,0 & 21  & 25,0 & 22  & 25.3 & 24  & ---  & --- \\\hline
@@ -132,7 +135,8 @@
   \begin{checklist}{Start}
     \item{Leistungshebel}{vollgas}
     \item{Drehzahl}{2400-2500 RPM}
-    \item{$V_{r}$}{51 kts}
+    \item{Abheben}{51 kt}
+    \item{Steigfluggeschwindigkeit}{65-70 kt}
   \end{checklist}
 \end{task}
 
@@ -160,7 +164,7 @@
   \begin{checklist}{Endanflug}
     \item{Propeller}{max. rpm}
     \item{Landeklappen}{landung}
-    \hint{Geschwindigkeit 65kts}
+    \hint{Geschwindigkeit 65kt}
   \end{checklist}
 \end{task}
 
@@ -188,10 +192,11 @@
 
 \begin{task}
   \begin{checklist}{Geschwindigkeiten}
-    \item{V$_{x}$}{57 kt \textit{Flaps TO}}
-    \item{V$_{y}$}{68 kt \textit{Flaps TO}}
-    \item{V$_{x}$}{60 kt \textit{Flaps CRUISE}}
-    \item{V$_{y}$}{75 kt \textit{Flaps CRUISE}}
+    \item{V$_{BG}$}{72 kt \textit{Klappen Start}}
+    \item{V$_{X}$}{57 kt \textit{Klappen Start}}
+    \item{V$_{Y}$}{68 kt \textit{Klappen Start}}
+    \item{V$_{X}$}{60 kt \textit{Klappen Reise}}
+    \item{V$_{Y}$}{75 kt \textit{Klappen Reise}}
   \end{checklist}
   \begin{checklist}{Kraftstoff}
     \item{Tankinhalt}{76 Liter}
@@ -200,10 +205,5 @@
       \hint{Minimum ROZ 90 (EN228)}
   \end{checklist}
 \end{task}
-
-
-
-
-
 
 \end{document}
