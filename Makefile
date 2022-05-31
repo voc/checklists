@@ -15,6 +15,8 @@ compile: $(SOURCES)
 	@for i in $(SOURCES); do \
         echo Building $$i from source && \
 		xelatex -output-dir=$(BUILD_DIR) $$i; \
+		xelatex -output-dir=$(BUILD_DIR) $$i; \
+		xelatex -output-dir=$(BUILD_DIR) $$i; \
     done
 	
 publish:

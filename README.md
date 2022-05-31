@@ -1,5 +1,7 @@
 # Checklists template in LaTeX
 
+![Example Checklist](example_checklist.png)
+
 This is a simple set of LaTex files to produce nice PDF formatted checklists.
 You need to have a LaTex environment set up and `xelatex` available.
 
@@ -15,19 +17,33 @@ Here's an example of a simple checklist:
 
 \begin{document}
 
-\begin{task}
-  \begin{checklist}{Nach dem Start}
-    \item{Landescheinwerfer}{AUS}
-    \item{Landeklappen}{EINGEFAHREN}
-    \item{Propeller}{2300 RPM}
-    \item{Gemisch}{Verarmt}
-  \end{checklist}
-\end{task}
+\title{Demo Checklist}
+\versionchecklist{1.0}
+\datechecklist{30.05.2022}
+
+\begin{checklist}{After Start}
+  \item{Oil Pressure}{green}
+  \item{Ampéremeter}{loading}
+  \item{Avionik}{on}
+    \hint{Funk, Transponder, EDM, Flarm}
+\end{checklist}
 
 \end{document}
 ```
 
-After this, running `make` should output a PDF file on `pdf/` directory, which
+## Supported Variables and Elements
+| Type        | Name       | Usage                                                                        | Parameter            |
+|-------------|------------|------------------------------------------------------------------------------|----------------------|
+| Environment | memoryitem | Draws a box around the enclosed checklist group. Indication a memory item.   | none                 |
+| Environment | checklist  | Defines the base environment for all further commands.                       | checklist_name       |
+| Command     | item       | Base element for checklist, representing an individual step.                 | item_name, condition |
+| Command     | hint       | Indented paragraph, used for notes within a step.                            | hint_text            |
+| Command     | decision   | Creates a decision header.                                                   | decision_name        |
+| Command     | step       | Subelement for decision, representing an indivudual step withing a decision. | item_name, condition |
+
+
+## Build process
+After this, running `make all` should output a PDF file on `pdf/` directory, which
 will look similar to this:
 
-![Groceries Checklist](https://raw.githubusercontent.com/mavcunha/checklists/master/img/groceries_checklist.png)
+You will find templates wihtin the `source` directory.
