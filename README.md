@@ -40,7 +40,9 @@ Here's an example of a simple checklist:
 | Command     | hint       | Indented paragraph, used for notes within a step.                            | hint_text            |
 | Command     | decision   | Creates a decision header.                                                   | decision_name        |
 | Command     | step       | Subelement for decision, representing an indivudual step withing a decision. | item_name, condition |
-
+| Parameter   | title      | Title of the entire checklist, printed on top of the page.                   | checklist_name       |
+| Parameter   | versionchecklist | Version of the checklist                                               | checklist_version    |
+| Paramter    | datechecklist    | Date when the version of this checklist was released                   | checklist_date       |
 
 ## Build process
 After this, running `make all` should output a PDF file on `pdf/` directory, which
