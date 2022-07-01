@@ -36,7 +36,7 @@
   \documentclass[10pt]{article}
   \usepackage[a6paper, twocolumn]{geometry}
   \geometry{
-    total={95.5mm,135mm},
+    total={95.5mm,130mm},
     includehead,
     headsep=2mm,
     top=5mm,
@@ -129,6 +129,6 @@
   }
 
   \begin{tabular}{p{0.9\linewidth}}
-       \multicolumn{1}{c}{\cellcolor{black!75}\color{white}\textbf{\uppercase{#1}}}\\
+       \multicolumn{1}{c}{\cellcolor{black!90}\color{white}\textbf{\uppercase{#1}}}\\
        \vspace{0.25em}
 }{\end{tabular}\vspace{0.5em}}
