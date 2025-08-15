@@ -1,0 +1,87 @@
+\def\papersize{4}
+\input{preamble.inc}
+
+\begin{document}
+
+\title{Stage Bootup}
+\versionchecklist{0.1}
+\datechecklist{15.08.2025}
+
+\begin{checklist}{On Room Enter}
+  \item{General lighting}{on}
+  \item{Stage Lighting}{on}
+  \item{PA}{on}
+  \item{Projector}{on}
+    \hint{correct input selected}
+\end{checklist}
+
+\begin{checklist}{Each Camera}
+  \item{Camera}{on}
+  \item{Monitor}{on}
+  \item{SD Card A}{inserted}
+  \item{SD Card A}{formatted}
+  \item{SD Card B}{inserted}
+  \item{SD Card B}{formatted}
+  \item{Auto Focus}{on}
+  \item{Iris}{adjusted as needed}
+  \item{White Balance}{adjusted as needed}
+    \hint{not too orange, not too blue}
+  \item{Recording}{started}
+  \item{Focus Peaking on Monitor}{on}
+\end{checklist}
+
+\begin{checklist}{Front of House}
+  \item{Audio Mixer}{on}
+  \item{Mic Reciever}{on}
+  \item{Encoder PC}{on}
+  \item{Mixer Laptop}{on}
+  \item{Voctogui}{visible}
+  \item{ATEM Switcher}{visible}
+  \item{Mixer SD Card}{inserted}
+  \item{Mixer SD Card}{formatted}
+\end{checklist}
+
+\begin{checklist}{Each Micophone}
+  \item{Full Batteries}{inserted}
+  \item{Transmitters}{on}
+  \item{Signal on Audio Mixer}{present}
+  \item{Signal in Recording}{present}
+  \item{Empty Batteries}{in charger}
+\end{checklist}
+
+\begin{checklist}{Lectern}
+  \item{Lectern Module}{powered}
+  \item{Speaker Adapters}{present}
+  \item{Laptop HDMI Cable}{present}
+  \item{Laptop Audio Cable}{present}
+  \item{Slides from Laptop}{operational}
+    \hint{connect own laptop, select input on ATEM, observe image on Projector}
+  \item{Audio from Laptop}{operational}
+    \hint{connect own laptop, play music, listen on Audio mixer, PA and recording}
+\end{checklist}
+
+
+\begin{checklist}{Sync Check}
+  \item{Camera}{closeup lectern}
+  \item{Microphone 1}{unmuted to PA and stream}
+  \item{Voctomix Blinder}{live}
+  \item{Clap}{ten times}
+    \hint{on camera, at lectern, into the livestream}
+  \item{Audio/Video Sync}{observe}
+    \hint{listen to livestream, watch for sync of hands touching and clap in audio}
+  \item{Restart voctocore}{as needed}
+    \hint{systemctl restart voctomix2-voctocore}
+  \item{Voctomix Blinder}{break}
+
+\end{checklist}
+
+
+\begin{checklist}{Talk Start}
+  \item{Herald Mic}{unmuted}
+  \item{Speaker Mic}{unmuted}
+  \item{Voctomix Blinder}{live}
+    \hint{Voctogui}
+  \item{Composite Mode}{as needed}
+\end{checklist}
+
+\end{document}
