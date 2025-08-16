@@ -20,7 +20,7 @@
 \fi
 \if\papersize5
   \documentclass[10pt]{article}
-  \usepackage[a5paper, twocolumn]{geometry}
+  \usepackage[a5paper]{geometry}
   \geometry{
     total={130mm,190mm},
     includehead,
