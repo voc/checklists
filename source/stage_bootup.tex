@@ -3,16 +3,16 @@
 
 \begin{document}
 
-\title{A/V Technician & Stage Bootup}
-\versionchecklist{0.1}
-\datechecklist{15.08.2025}
+\title{Stage Bootup by A/V Technician}
+\versionchecklist{0.2}
+\datechecklist{17.08.2025}
 
 \begin{checklist}{On Room Enter}
   \item{General lighting}{on}
   \item{Stage Lighting}{on}
   \item{PA}{on}
   \item{Projector}{on}
-    \hint{correct input selected}
+    \step{correct input selected}
 \end{checklist}
 
 \begin{checklist}{Each Camera}
@@ -24,7 +24,7 @@
   \item{Auto Focus}{on}
   \item{Iris}{adjusted as needed}
   \item{White Balance}{adjusted as needed}
-    \hint{not too orange, not too blue}
+    \step{not too orange, not too blue}
   \item{Recording}{started}
   \item{Focus Peaking on Monitor}{on}
 \end{checklist}
@@ -55,25 +55,27 @@
   \item{Laptop HDMI Cable}{present}
   \item{Laptop Audio Cable}{present}
   \item{Slides from Laptop}{operational}
-  \step{connect own laptop}
-  \step{select input on ATEM}
-  \step{observe image on Projector}
+  \step{Connect own laptop}
+  \step{Select input on ATEM}
+  \step{Observe image on Projector}
   \item{Audio from Laptop}{operational}
-  \step{connect own laptop}
-  \step{play music}
-  \step{listen on Audio mixer, PA and recording}
+  \step{Connect own laptop}
+  \step{Play music}
+  \step{Listen on Audio mixer, PA and recording}
+  \item{Selected Input}{infobeamer}
 \end{checklist}
-
 
 \begin{checklist}{Sync Check}
   \item{Camera}{closeup lectern}
-  \item{Microphone 1}{unmuted to PA and stream}
+  \item{Mic 1}{unmuted to PA and stream}
   \item{Voctomix Blinder}{live}
   \item{Clap}{ten times}
-    \hint{on camera, at lectern, into the livestream}
+    \step{Grab Mic}
+    \step{Step in front of camera}
+    \step{e.g. at lectern}
   \item{Audio/Video Sync}{observe}
-    \step{listen to livestream}
-    \step{watch for sync of hands touching and clap in audio}
+    \step{Listen to livestream}
+    \step{Observe sync of hands and audio}
   \item{Restart voctocore}{as needed}
     \step{systemctl restart voctomix2-voctocore}
   \item{Voctomix Blinder}{break}
