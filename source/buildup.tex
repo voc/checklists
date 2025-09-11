@@ -1,0 +1,66 @@
+\def\papersize{4}
+\input{preamble.inc}
+
+\begin{document}
+
+\title{VOC Case 2.0 Buildup}
+\versionchecklist{1}
+\datechecklist{11.09.2025}
+
+\begin{checklist}{Room Check}
+  \item{Camera Position}{define}
+  \item{Camera Powersource}{find}
+  \item{FOH Position}{define}
+    \hint{FOH: Mixer Laptop + Audio Mixer}
+  \item{FOH Powersource}{find}
+  \item{Lectern}{find}
+  \item{Lectern Powersource}{find}
+  \item{Beamer HDMI Input}{find}
+  \item{Audio Inout}{find}
+  \item{Network Port}{find}
+\end{checklist}
+
+\begin{checklist}{Distribute material}
+  \item{FOH Modul}{-> FOH}
+  \item{Box Mixer Laptop}{-> FOH}
+  \item{Cable Schuko<->True1}{-> FOH}
+  \decision{FOH: Place for Encoder?}
+    \item{Encoder}{-> FOH}
+    \item{Cable Schuko<->C14}{-> FOH}
+  \item{2x Box Microphone}{-> Lectern}
+  \item{Lectern Modul}{-> Lectern}
+  \item{Cable Schuko<->True1}{-> Lectern}
+  \item{Box Speaker Adapter}{-> Lectern}
+  \item{Battery Box}{-> Lectern}
+    \hint{place batteries in charger}
+  \item{Box Camera}{-> Camera Position}
+  \item{tripod bag}{-> Camera Position}
+\end{checklist}
+
+\begin{checklist}{Wiring in the room}
+  \item{Network Cable RJ45}{FOH<->Lectern}
+  \item{SDI}{Lectern->FOH}
+  \item{XLR}{FOH->Audio In}
+\end{checklist}
+
+\begin{checklist}{Wiring Lectern Modul}
+  \item{Powercable Schuko<->True1}{connected}
+  \item{Beamer HDMI Input}{Projector out}
+  \item{HDMI Cable}{Laptop in}
+  \item{3,5mm<->Cinch Cable}{Audio L/R}
+  \item{SDI Cable <-FOH}{Slides}
+  \item{RJ45 Cable <-FOH}{Trunk}
+\end{checklist}
+
+\begin{checklist}{Wiring FOH}
+  \item{Powercable Schuko<->True1}{connected}
+  \item{SDI FOH}{SDI in}
+  \item{SDI -> Encoder}{SDI out}
+  \item{Network RJ45}{Switch Port 24}
+\end{checklist}
+
+\begin{checklist}{Test}
+  \item{Run "Stage bootup" Checklist}{done}
+\end{checklist}
+
+\end{document}
