@@ -9,12 +9,12 @@
 
 \begin{checklist}{Room Check}
   \item{Camera Position}{define}
-  \item{Camera Powersource}{find}
+  \item{Camera power source}{find}
   \item{FOH Position}{define}
     \hint{Mixer Laptop + Audio Mixer}
-  \item{FOH Powersource}{find}
+  \item{FOH power source}{find}
   \item{lectern}{find}
-  \item{lectern Powersource}{find}
+  \item{lectern power source}{find}
   \item{Beamer HDMI Input}{find}
   \item{Audio Input}{find}
   \item{Network Uplink Port}{find}
@@ -25,7 +25,7 @@
   \item{Box Mixer Laptop}{-> FOH}
   \item{Cable Schuko<->True1}{-> FOH}
   \item{Headphones (DT770)}{-> FOH}
-  \decision{Encoder location FOH?}
+  \decision{Room for Encoder @FOH ?}
   \item{Encoder}{-> FOH}
   \item{Cable Schuko<->C14}{-> FOH}
   \item{}{}
@@ -49,11 +49,11 @@
   \item{Network Cable}{Uplink -> FOH/lectern}
   \item{lectern: port "uplink"}{connected}
   \item{FOH: sw port XYZ "uplink"}{connected}
-  % TODO Uplink Port @FOH-Module missing 
+  % TODO Uplink Port @FOH-module missing
 \end{checklist}
 
 \begin{checklist}{wiring lectern modul}
-  \item{Powercable Schuko<->True1}{connected}
+  \item{power cable Schuko<->True1}{connected}
   \item{Beamer HDMI Input}{Projector out}
   \item{HDMI Cable}{Laptop in}
   \item{3,5mm<->Cinch Cable}{Audio L/R}
@@ -63,8 +63,8 @@
     \hint{place batteries in charger near lectern}
 \end{checklist}
 
-\begin{checklist}{wiring FOH Module}
-  \item{Powercable Schuko<->True1}{connected}
+\begin{checklist}{wiring FOH module}
+  \item{power cable Schuko<->True1}{connected}
   \item{SDI from lectern}{SDI in}
   \item{SDI to Encoder}{SDI out}
     \hint{SDI in/out on the back side}
@@ -90,7 +90,7 @@
   \item{Mixer Laptop }{ON}
 \end{checklist}
 
-\begin{checklist}{Setup FOH Module}
+\begin{checklist}{Setup FOH module}
   \item{Mic Reciever}{ON}
   \item{Audio Mixer}{ON}
   \item{Mixer VOC Scene}{applied}
