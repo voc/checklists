@@ -1,5 +1,4 @@
 % vim: ft=tex
-
 % ---------------------------------------------------------------
 % Determine pater size and layout based on parameter "papersize"
 % Allowed values for "papersize": [4,5,6]
@@ -19,7 +18,7 @@
   }
 \fi
 \if\papersize5
-  \documentclass[10pt]{article}
+  \documentclass[20pt]{extarticle}
   \usepackage[a5paper]{geometry}
   \geometry{
     total={130mm,190mm},
@@ -27,14 +26,14 @@
     headsep=5mm,
     top=5mm,
     left=10mm,
-    footskip=5mm,
+    footskip=25pt,
     marginparwidth=0mm,
     marginparsep=0mm,
   }
 \fi
 \if\papersize6
   \documentclass[10pt]{article}
-  \usepackage[a6paper, twocolumn]{geometry}
+  \usepackage[a6paper]{geometry}
   \geometry{
     total={95.5mm,130mm},
     includehead,
@@ -59,6 +58,20 @@
     marginparwidth=0mm,
     marginparsep=0mm,
     }
+\fi
+\if\papersize8
+  \documentclass[10pt]{article}
+  \usepackage[a5paper, twocolumn]{geometry}
+  \geometry{
+    total={130mm,190mm},
+    includehead,
+    headsep=5mm,
+    top=5mm,
+    left=10mm,
+    footskip=5mm,
+    marginparwidth=0mm,
+    marginparsep=0mm,
+  }
 \fi
 
 % ---------------------------------------------------------------
