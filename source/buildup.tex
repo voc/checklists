@@ -11,55 +11,102 @@
   \item{Camera Position}{define}
   \item{Camera Powersource}{find}
   \item{FOH Position}{define}
-    \hint{FOH: Mixer Laptop + Audio Mixer}
+    \hint{Mixer Laptop + Audio Mixer}
   \item{FOH Powersource}{find}
-  \item{Lectern}{find}
-  \item{Lectern Powersource}{find}
+  \item{lectern}{find}
+  \item{lectern Powersource}{find}
   \item{Beamer HDMI Input}{find}
   \item{Audio Input}{find}
-  \item{Network Port}{find}
+  \item{Network Uplink Port}{find}
 \end{checklist}
 
 \begin{checklist}{Distribute material}
   \item{FOH Modul}{-> FOH}
   \item{Box Mixer Laptop}{-> FOH}
   \item{Cable Schuko<->True1}{-> FOH}
-  \decision{FOH: Place for Encoder?}
-    \item{Encoder}{-> FOH}
-    \item{Cable Schuko<->C14}{-> FOH}
-  \item{2x Box Microphone}{-> Lectern}
-  \item{Lectern Modul}{-> Lectern}
-  \item{Cable Schuko<->True1}{-> Lectern}
-  \item{Box Speaker Adapter}{-> Lectern}
-  \item{Battery Box}{-> Lectern}
-    \hint{place batteries in charger}
+  \item{Headphones (DT770)}{-> FOH}
+  \decision{Encoder location FOH?}
+  \item{Encoder}{-> FOH}
+  \item{Cable Schuko<->C14}{-> FOH}
+  \item{}{}
+  \item{2x Box Microphone}{-> lectern}
+    \hint{all Mics powered OFF until frequency scan}
+  \item{lectern modul}{-> lectern}
+  \item{Cable Schuko<->True1}{-> lectern}
+  \item{Box Speaker Adapter}{-> lectern}
+  \item{Battery Box/charger}{-> lectern}
   \item{Box Camera}{-> Camera Position}
   \item{tripod bag}{-> Camera Position}
 \end{checklist}
 
 \begin{checklist}{Wiring in the room}
-  \item{Network Cable RJ45}{FOH<->Lectern}
-  \item{SDI}{Lectern->FOH}
-  \item{XLR}{FOH->Audio In}
+  \item{Network Cable}{FOH<->lectern}
+      \hint{lectern front pannel: Trunk Port}
+      \hint{FOH sw: Trunk Port (24)}
+  \item{SDI}{lectern -> FOH}
+  \item{XLR}{FOH -> Audio In}
+  \decision{Uplink port closer to FOH/lectern?}
+  \item{Network Cable}{Uplink -> FOH/lectern}
+  \item{lectern: port "uplink"}{connected}
+  \item{FOH: sw port XYZ "uplink"}{connected}
+  % TODO Uplink Port @FOH-Module missing 
 \end{checklist}
 
-\begin{checklist}{Wiring Lectern Modul}
+\begin{checklist}{wiring lectern modul}
   \item{Powercable Schuko<->True1}{connected}
   \item{Beamer HDMI Input}{Projector out}
   \item{HDMI Cable}{Laptop in}
   \item{3,5mm<->Cinch Cable}{Audio L/R}
   \item{SDI Cable <-FOH}{Slides}
   \item{RJ45 Cable <-FOH}{Trunk}
+  \item{Battery charger}{ON}
+    \hint{place batteries in charger near lectern}
 \end{checklist}
 
-\begin{checklist}{Wiring FOH}
+\begin{checklist}{wiring FOH Module}
   \item{Powercable Schuko<->True1}{connected}
-  \item{SDI FOH}{SDI in}
-  \item{SDI -> Encoder}{SDI out}
-  \item{Network RJ45}{Switch Port 24}
+  \item{SDI from lectern}{SDI in}
+  \item{SDI to Encoder}{SDI out}
+    \hint{SDI in/out on the back side}
+  \item{Network Trunk lectern}{sw Port 24}
+\end{checklist}
+
+\begin{checklist}{wiring & setup Camera}
+  \item{Camera on tripod}{done}
+  \item{external Monitor}{attached}
+  \item{Power: Camera & Monitor}{connected}
+    \hint{connect to FOH module power sockets}
+    \hint{if needed use (multi socket) extension}
+  \item{HDMI Camera -> Monitor}{done}
+  \item{empty Camera box}{in Case}
+\end{checklist}
+
+\begin{checklist}{Setup Mixer Laptop}
+  \item{Laptop on mixer positions}{placed}
+  \item{Powersupply}{connected}
+  \item{Mouse}{connected}
+  \item{Network cable}{connected}
+    \hint{connect to VOC (V)LAN on FOH module}
+  \item{Mixer Laptop }{ON}
+\end{checklist}
+
+\begin{checklist}{Setup FOH Module}
+  \item{Mic Reciever}{ON}
+  \item{Audio Mixer}{ON}
+  \item{Mixer VOC Scene}{applied}
+  \item{Audio Output}{connected}
+\end{checklist}
+
+\begin{checklist}{Software setup}
+  \item{Voctocore config}{done}
+    \hint{see cm/bundlewrap/README.md}
+  \item{Shure frequency}{scan}
+  \item{Shure frequencies @location}{configured}
 \end{checklist}
 
 \begin{checklist}{Test}
+  \decision{Software setup completed?}
+  \item{Microphone frequency sync}{done}
   \item{Run "Stage bootup" Checklist}{done}
 \end{checklist}
 
