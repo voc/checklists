@@ -110,9 +110,9 @@
 
 
 % Set Footer
-\cfoot{\textcolor{lightgray}{\footnotesize\thepage\ of \pageref{LastPage}}}
-\newcommand{\versionchecklist}[1]{\lfoot{\textcolor{lightgray}{\footnotesize Version #1}}}
-\newcommand{\datechecklist}[1]{\rfoot{\textcolor{lightgray}{\footnotesize#1}}}
+\cfoot{}
+\newcommand{\versionchecklist}[1]{\lfoot{\textcolor{gray}{\footnotesize Version #1 | c3voc.de/checklists | Page \thepage\ of \pageref{LastPage}}}}
+\newcommand{\datechecklist}[1]{\rfoot{\textcolor{gray}{\footnotesize#1}}}
 
 % ---------------------------------------------------------------
 % Checklist Environment Definitions
