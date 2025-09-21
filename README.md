@@ -1,58 +1,32 @@
-# Checklists template in LaTeX
+# Checklists 
 
-![Example Checklist](example_checklist_1.jpg)
-![Example Checklist](example_checklist_2.jpg)
+This is repos contains various checklists for [C3VOC room case sets 2.0](https://c3voc.de/wiki/hardware:room-case-2.0)
+
+## Buildup & Operation
+
+* [VOC Case 2.0 Buildup](./source/buildup.pdf)
+* [Stage Bootup by A/V Technician](./source/stage_bootup.pdf)
+* [Talk Checklist](./source/talk.pdf)
 
 
-This is a simple set of LaTex files to produce nice PDF formatted checklists.
+## Hardware 
+
+* [Camera](./source/camera_crate.pdf)
+* [Mixer Laptop](./source/mixer_laptop_crate.pdf)
+* [Ethernet](./source/ethernet_crate.pdf)
+* [Embeder & Converter](./source/embedder_and_converter_crate.pdf)
+* [Short Audio Cables \& DI Boxes](./source/audio_di_crate.pdf)
+* [Small Parts](./source/small_parts.pdf)
+* [Winkekatze & Batteries](./source/lucky_cat_and_battery_crate.pdf)
+* [Tape](./source/tape_crate.pdf)
+
+
+
+# Checklist development process
+
 You need to have a LaTex environment set up and `xelatex` available.
 
-## Creating a checklist
-
-First create a file called `checklist.tex` on source directory. You can use any name as long the
-file has the extension `.tex`.
-
-Here's an example of a simple checklist:
-
-```Tex
-\def\papersize{4}
-\input{preamble.inc}
-
-\begin{document}
-
-\title{Example}
-\versionchecklist{1}
-\datechecklist{25.10.2024}
-
-\begin{checklist}{Checklist Name}
-  \item{Checkitem 1}{result}
-  \item{Checkitem 2}{another result}
-    \hint{I am a hint!}
-  \decision{Decision: Cold}
-    \step{Step: 1}
-    \step{Step: Math is hard...}
-  \decision{Decision: Warm}
-    \step{Heater: Off}
-    \item{Checkitem 3}{result}
-\end{checklist}
-
-\end{document}
-```
-
-## Supported Variables and Elements
-| Type        | Name       | Usage                                                                        | Parameter            |
-|-------------|------------|------------------------------------------------------------------------------|----------------------|
-| Environment | checklist  | Defines the base environment for all further commands.                       | checklist_name       |
-| Command     | item       | Base element for checklist, representing an individual step.                 | item_name, condition |
-| Command     | hint       | Indented paragraph, used for notes within a step.                            | hint_text            |
-| Command     | decision   | Creates a decision header.                                                   | decision_name        |
-| Command     | step       | Subelement for decision, representing an indivudual step withing a decision. | item_name, condition |
-| Parameter   | title      | Title of the entire checklist, printed on top of the page.                   | checklist_name       |
-| Parameter   | versionchecklist | Version of the checklist                                               | checklist_version    |
-| Paramter    | datechecklist    | Date when the version of this checklist was released                   | checklist_date       |
-
-## Build process
-After this, running `make all` should output a PDF file on `pdf/` directory, which
+Running `make all` should output a PDF file on `pdf/` directory, which
 will look similar to this:
 
-You will find templates wihtin the `source` directory.
+You will find the source files wihtin the `source` directory.
