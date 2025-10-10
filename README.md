@@ -19,6 +19,7 @@ This is repos contains various checklists for [C3VOC room case sets 2.0](https:/
 * [Small Parts](./source/small_parts.pdf)
 * [Winkekatze & Batteries](./source/lucky_cat_and_battery_crate.pdf)
 * [Tape](./source/tape_crate.pdf)
+* [Speaker Adapters](./source/speaker_adapters.pdf)
 
 
 
