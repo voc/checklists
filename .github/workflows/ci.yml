@@ -69,11 +69,25 @@ jobs:
           name: build-debug
           path: build/
 
-      - name: Create release
-        if: github.ref == 'refs/heads/main'
-        id: create_release
-        uses: softprops/action-gh-release@v3
+      - name: Copy static files to pdf/ for GitHub Pages
+        run: |
+          mkdir -p _pages/pdf/
+          cp pdf/*.pdf _pages/pdf/
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-          files: pdf/*.pdf
-          tag_name: ${{ github.sha }}
-          target_commitish: ${{ github.sha }}
+          path: _pages/
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
