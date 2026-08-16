@@ -8,6 +8,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      actions: write
     steps:
       - uses: actions/checkout@v6
 
@@ -64,3 +68,9 @@ jobs:
         with:
           name: build-debug
           path: build/
+
+      - name: Create release
+        if: success()
+        uses: softprops/action-gh-release@v3
+        with:
+          files: pdf/*.pdf
