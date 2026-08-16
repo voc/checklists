@@ -75,3 +75,5 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           files: pdf/*.pdf
+          tag_name: ${{ github.sha }}
+          target_commitish: ${{ github.sha }}
