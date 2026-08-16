@@ -1,7 +1,6 @@
 on:
   push:
 
-
 concurrency: 
   group: ci
   cancel-in-progress: true
@@ -15,7 +14,19 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive texlive-latex-extra texlive-fonts-extra texlive-xetex texlive-fonts-recommended texlive-fonts-extra cm-super fonts-lmodern fonts-dejavu-core
+          sudo apt-get install -y \
+            texlive-xetex \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            cm-super \
+            fonts-lmodern \
+            fonts-dejavu-core
+
+          # refresh TeX's filename and map databases so xdvipdfmx can find fonts
+          sudo mktexlsr
+          sudo updmap-sys || true
 
       - name: Build PDFs
         run: |
