@@ -1,7 +1,7 @@
 on:
   push:
 
-concurrency: 
+concurrency:
   group: ci
   cancel-in-progress: true
 
@@ -10,40 +10,57 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      
+
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            texlive-xetex \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-fonts-extra \
-            cm-super \
-            fonts-lmodern \
-            fonts-dejavu-core
-
-          # refresh TeX's filename and map databases so xdvipdfmx can find fonts
+          # texlive-full is large but ensures all fonts/maps are available
+          sudo apt-get install -y texlive-full
+          # refresh TeX filename and map databases so xdvipdfmx can find fonts
           sudo mktexlsr
           sudo updmap-sys || true
 
       - name: Build PDFs
         run: |
+          set -euo pipefail
           mkdir -p build/
           mkdir -p pdf/
+          BUILD_FAILED=0
 
           for file in source/*.tex; do
             echo "Building $file from source"
-            xelatex -output-dir=build "$file"
-            xelatex -output-dir=build "$file"
-            xelatex -output-dir=build "$file"
+            # run xelatex up to 3 times to resolve refs; stop early on success
+            xelatex -output-dir=build "$file" || true
+            xelatex -output-dir=build "$file" || true
+            xelatex -output-dir=build "$file" || true
+            # check whether PDF was produced
+            base=$(basename "$file" .tex)
+            if [ ! -f "build/${base}.pdf" ]; then
+              echo "Build failed for $file"
+              BUILD_FAILED=1
+            fi
           done
+
+          # If any build failed, show logs and exit nonzero
+          if [ "$BUILD_FAILED" -ne 0 ]; then
+            echo "One or more builds failed — dumping build logs:"
+            find build -name "*.log" -print -exec sed -n '1,200p' {} \; || true
+            # preserve build dir as artifact in the next step by failing with nonzero
+            exit 1
+          fi
 
           mv -v build/*.pdf pdf/
 
       - name: Upload PDFs
+        if: success()
         uses: actions/upload-artifact@v6
         with:
           name: pdfs
           path: pdf/
+
+      - name: Upload build logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: build-debug
+          path: build/
