@@ -22,7 +22,7 @@ jobs:
           mkdir -p build/
           mkdir -p pdf/
 
-          for file in source/*; do
+          for file in source/*.tex; do
             echo "Building $file from source"
             xelatex -output-dir=build "$file"
             xelatex -output-dir=build "$file"
