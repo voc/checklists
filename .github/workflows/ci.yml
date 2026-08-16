@@ -75,7 +75,7 @@ jobs:
           cp pdf/*.pdf _pages/pdf/
 
           # create a simple index.html to link to the PDFs
-          echo "<!DOCTYPE html><html><head><meta charset='utf-8'><title>PDFs</title></head><body><h1>PDFs</h1><ul>" > _pages/index.html
+          echo "<!DOCTYPE html><html><head><meta charset='utf-8'><title>Checklists</title></head><body><h1>Checklists</h1><ul>" > _pages/index.html
           # some css for fonts etc
           echo "<style>body { font-family: sans-serif; }</style>" >> _pages/index.html
           for pdf in pdf/*.pdf; do
