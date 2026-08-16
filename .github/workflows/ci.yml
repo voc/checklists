@@ -74,6 +74,14 @@ jobs:
           mkdir -p _pages/pdf/
           cp pdf/*.pdf _pages/pdf/
 
+          # create a simple index.html to link to the PDFs
+          echo "<!DOCTYPE html><html><head><meta charset='utf-8'><title>PDFs</title></head><body><h1>PDFs</h1><ul>" > _pages/index.html
+          for pdf in pdf/*.pdf; do
+            base=$(basename "$pdf")
+            echo "<li><a href='pdf/$base'>$base</a></li>" >> _pages/index.html
+          done
+          echo "</ul></body></html>" >> _pages/index.html
+
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
