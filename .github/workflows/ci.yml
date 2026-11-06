@@ -10,21 +10,14 @@ jobs:
   build:
     name: Build checklists
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/voc/checklists:latest
     permissions:
       contents: read
       packages: write
       actions: write
     steps:
-      - uses: actions/checkout@v6
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          # texlive-full is large but ensures all fonts/maps are available
-          sudo apt-get install -y texlive-full
-          # refresh TeX filename and map databases so xdvipdfmx can find fonts
-          sudo mktexlsr
-          sudo updmap-sys || true
+      - uses: actions/checkout@v7
 
       - name: Build PDFs
         run: |
@@ -59,14 +52,14 @@ jobs:
 
       - name: Upload PDFs
         if: success()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: pdfs
           path: pdf/
 
       - name: Upload build logs on failure
         if: failure()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: build-debug
           path: build/
@@ -86,7 +79,7 @@ jobs:
             base=$(basename "$pdf")
             echo "<li><a href='pdf/$base'>$base</a></li>" >> _pages/index.html
           done
-          echo "</ul><h2>SVGs</h2><ul>"
+          echo "</ul><h2>SVGs</h2><ul>" >> _pages/index.html
           for svg in svg/*.svg; do
             base=$(basename "$svg")
             echo "<li><a href='svg/$base'>$base</a></li>" >> _pages/index.html
@@ -95,7 +88,7 @@ jobs:
 
       - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+        uses: actions/upload-pages-artifact@v5 # or specific "vX.X.X" version tag for this action
         with:
           path: _pages/
 
