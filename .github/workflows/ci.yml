@@ -69,7 +69,7 @@ jobs:
           mkdir -p _pages/pdf/
           mkdir -p _pages/svg/
           cp pdf/*.pdf _pages/pdf/
-          cp *.svg _pages/svg/
+          cp svg/*.svg _pages/svg/
 
           # create a simple index.html to link to the PDFs
           echo "<!DOCTYPE html><html><head><meta charset='utf-8'><title>Checklists</title></head><body><h1>Checklists</h1><ul>" > _pages/index.html
