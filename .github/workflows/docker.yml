@@ -33,4 +33,4 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-          tags: voc/checklists:latest
+          tags: ghcr.io/voc/checklists:latest
