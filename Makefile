@@ -1,32 +1,26 @@
-# Set 
 SOURCE_DIR := source
 BUILD_DIR := build
 OUTPUT_DIR := pdf
 
 SOURCES := $(wildcard $(SOURCE_DIR)/*.tex)
+PDFS := $(patsubst $(SOURCE_DIR)/%.tex,$(OUTPUT_DIR)/%.pdf,$(SOURCES))
 
-all: prepare_directories compile publish cleanup
+.PHONY: all prepare_directories cleanup list_sources
+
+all: $(PDFS)
 
 prepare_directories:
-	mkdir -p $(BUILD_DIR)
-	mkdir -p $(OUTPUT_DIR)
+	mkdir -p $(BUILD_DIR) $(OUTPUT_DIR)
 
-compile: $(SOURCES)
-	@for i in $(SOURCES); do \
-        echo Building $$i from source && \
-		xelatex -output-dir=$(BUILD_DIR) $$i; \
-		xelatex -output-dir=$(BUILD_DIR) $$i; \
-		xelatex -output-dir=$(BUILD_DIR) $$i; \
-    done
-	
-publish:
-	mv $(BUILD_DIR)/*.pdf $(OUTPUT_DIR)
+$(OUTPUT_DIR)/%.pdf: $(SOURCE_DIR)/%.tex | prepare_directories
+	xelatex -output-directory=$(BUILD_DIR) $<
+	xelatex -output-directory=$(BUILD_DIR) $<
+	xelatex -output-directory=$(BUILD_DIR) $<
+	mv $(BUILD_DIR)/$*.pdf $@
 
 cleanup:
 	@echo Removing $(BUILD_DIR)
 	rm -rf $(BUILD_DIR)
 
 list_sources:
-	@for i in $(SOURCES); do \
-        echo $$i; \
-    done
+	@for i in $(SOURCES); do echo $$i; done
