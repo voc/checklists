@@ -21,10 +21,49 @@
      id="defs637">
     <pattern
        inkscape:collect="always"
+       xlink:href="#Grid1"
+       preserveAspectRatio="xMidYMid"
+       id="pattern26"
+       patternTransform="scale(1)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="20"
+       height="20"
+       preserveAspectRatio="xMidYMid"
+       id="Grid1"
+       x="0"
+       y="0"
+       style="fill:#000000"
+       inkscape:label="Regular grid"
+       inkscape:collect="always"
+       inkscape:isstock="true">
+      <g
+         id="g63950-5">
+        <rect
+           style="fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none"
+           id="rect62492-2"
+           width="1"
+           height="20"
+           x="9.5"
+           y="0" />
+        <rect
+           style="fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none"
+           id="rect63583-4"
+           width="1"
+           height="20"
+           x="-10.5"
+           y="0"
+           transform="rotate(-90)" />
+      </g>
+    </pattern>
+    <pattern
+       inkscape:collect="always"
        xlink:href="#halftones"
        preserveAspectRatio="xMidYMid"
        id="pattern9"
-       patternTransform="scale(1)" />
+       patternTransform="scale(1)"
+       x="0"
+       y="0" />
     <pattern
        patternUnits="userSpaceOnUse"
        width="10"
@@ -88,9 +127,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.91507518"
-     inkscape:cx="874.24511"
-     inkscape:cy="519.08303"
+     inkscape:zoom="1.5570887"
+     inkscape:cx="813.69801"
+     inkscape:cy="258.17411"
      inkscape:window-width="1920"
      inkscape:window-height="1073"
      inkscape:window-x="0"
@@ -269,14 +308,14 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60.0001px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="text717"
            x="2776.1343"
-           y="164.81651"><tspan
+           y="128.35165"><tspan
              x="2776.1343 2809.7344 2849.1543 2879.9944 2917.1345 2955.1145 2990.5747 3017.8147"
-             y="164.81651"
+             y="128.35165"
              sodipodi:role="line"
              id="tspan713"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold'">Encoder-</tspan><tspan
              x="2776.1343 2832.7144 2869.8545 2907.8345 2947.2546"
-             y="224.81638"
+             y="188.35152"
              sodipodi:role="line"
              id="tspan715"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold'">Modul</tspan></text>
@@ -320,7 +359,7 @@
              y="814.52161">c3lingo</tspan></text>
         <g
            id="g1-1"
-           transform="matrix(0.9409837,0,0,1.1092198,89.807903,-23.02681)">
+           transform="matrix(0.9409837,0,0,1.1092198,89.807903,-71.646623)">
           <text
              xml:space="preserve"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.604px;line-height:0%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#00d4ff;stroke:#000000;stroke-width:0;stroke-dasharray:none"
@@ -334,6 +373,22 @@
                x="1688.0911"
                y="-106.06865"
                dx="0">Case x.2</tspan></text>
+        </g>
+        <g
+           id="g1-1-0"
+           transform="matrix(0.9409837,0,0,1.1092198,84.881095,25.741809)">
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:84.604px;line-height:0%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#00d4ff;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+             x="1522.7748"
+             y="-106.06865"
+             id="text3-0"
+             transform="scale(1.0857198,0.92104796)"><tspan
+               sodipodi:role="line"
+               id="tspan3-0-9"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.604px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold';text-align:center;direction:ltr;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0;stroke-dasharray:none"
+               x="1522.7748"
+               y="-106.06865">Check module orientation!!!</tspan></text>
         </g>
         <g
            id="g228-8"
@@ -630,6 +685,13 @@
            height="1315.04"
            x="2283.8506"
            y="213.97768" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:15.3133;stroke-dasharray:none;stroke-opacity:1"
+           id="rect2-6-0"
+           width="401.76672"
+           height="1315.04"
+           x="2741.1091"
+           y="214.88728" />
         <path
            style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:11.48499603;stroke-dasharray:none;stroke-opacity:1"
            d="M 242.42374,207.14357 V 1525.881"
@@ -941,6 +1003,125 @@
            ry="50.326939"
            inkscape:tile-x0="1131.343"
            inkscape:tile-y0="270.16308" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.65667;stroke-dasharray:none;stroke-opacity:1"
+           id="rect21"
+           width="345.9201"
+           height="180.01965"
+           x="2770.074"
+           y="244.34706" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:7.65667;stroke-dasharray:none;stroke-opacity:1"
+           id="rect22"
+           width="43.327511"
+           height="96.465248"
+           x="2789.333"
+           y="286.62479"
+           ry="0" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.0626656;stroke-dasharray:none;stroke-opacity:1"
+           id="rect23"
+           width="16.35004"
+           height="44.145103"
+           x="2842.4705"
+           y="309.51483" />
+        <rect
+           style="fill:url(#pattern26);fill-opacity:1;stroke:#000000;stroke-width:3.82833201;stroke-dasharray:none;stroke-opacity:1"
+           id="rect24"
+           width="179.87415"
+           height="1001.6412"
+           x="2931.8184"
+           y="471.01434" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.82832;stroke-dasharray:none;stroke-opacity:1"
+           id="rect26"
+           width="138.40012"
+           height="1002.5703"
+           x="2774.8596"
+           y="470.41437" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.82832;stroke-dasharray:none;stroke-opacity:1"
+           id="rect27"
+           width="127.15231"
+           height="20.079046"
+           x="2780.8831"
+           y="1444.0541"
+           inkscape:tile-cx="1387.9491"
+           inkscape:tile-cy="845.4541"
+           inkscape:tile-w="64.655431"
+           inkscape:tile-h="11.801295"
+           inkscape:tile-x0="1355.6214"
+           inkscape:tile-y0="839.55344" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           id="use34"
+           transform="translate(0,-226.89246)" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0,-198.20363)"
+           id="use35" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0,-169.51479)"
+           id="use36" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0,-140.82596)"
+           id="use37" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0,-112.13711)"
+           id="use38" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0.15225129,-83.315961)"
+           id="use38-1" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0,143.44419)"
+           id="use47" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0,-54.759436)"
+           id="use48" />
+        <use
+           x="0"
+           y="0"
+           inkscape:tiled-clone-of="#rect27"
+           xlink:href="#rect27"
+           transform="translate(0,-26.070596)"
+           id="use49" />
+        <rect
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.82832;stroke-dasharray:none;stroke-opacity:1"
+           id="rect55"
+           width="67.33036"
+           height="718.39984"
+           x="2784.8513"
+           y="487.25778" />
       </g>
       <rect
          style="fill:none;stroke:#000000;stroke-width:11.3386"
