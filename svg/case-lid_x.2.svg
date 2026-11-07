@@ -7,8 +7,8 @@
    width="420mm"
    height="297mm"
    viewBox="0 0 1587.4016 1122.5197"
-   sodipodi:docname="x.2.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="case-lid_x.2.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -32,14 +32,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.53259915"
-     inkscape:cx="445.92636"
-     inkscape:cy="773.56489"
-     inkscape:window-width="1865"
-     inkscape:window-height="1170"
-     inkscape:window-x="55"
-     inkscape:window-y="30"
-     inkscape:window-maximized="1"
+     inkscape:zoom="0.77044837"
+     inkscape:cx="455.57887"
+     inkscape:cy="438.05661"
+     inkscape:window-width="1104"
+     inkscape:window-height="1148"
+     inkscape:window-x="0"
+     inkscape:window-y="39"
+     inkscape:window-maximized="0"
      inkscape:current-layer="g643"
      inkscape:document-units="mm">
     <inkscape:page
@@ -189,32 +189,33 @@
              id="tspan715">Modul</tspan></text>
         <text
            xml:space="preserve"
-           transform="translate(1933.5636,452.35315)"
            style="font-variant:normal;font-weight:normal;font-size:40px;font-family:Roboto;-inkscape-font-specification:Roboto-Regular;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="text723"><tspan
-             x="0"
-             y="0"
+           id="text723"
+           x="1965.9767"
+           y="452.35315"><tspan
+             x="1965.9767"
+             y="452.35315"
              sodipodi:role="line"
              id="tspan719" /><tspan
-             x="0"
-             y="50.219177"
+             x="1965.9767"
+             y="503.84637"
              sodipodi:role="line"
              id="tspan1012" /><tspan
              sodipodi:role="line"
              id="tspan721"
-             x="0"
-             y="100.43835">5 x 3m</tspan><tspan
+             x="1965.9767"
+             y="555.3396">5 x 3m</tspan><tspan
              sodipodi:role="line"
-             x="0"
-             y="150.65753"
+             x="1965.9767"
+             y="606.83276"
              id="tspan1026">2 x 10m</tspan><tspan
              sodipodi:role="line"
-             x="0"
-             y="200.87671"
+             x="1965.9767"
+             y="658.32599"
              id="tspan1022">2 x 20m</tspan><tspan
              sodipodi:role="line"
-             x="0"
-             y="251.09589"
+             x="1965.9767"
+             y="709.81921"
              id="tspan1024" /></text>
         <text
            xml:space="preserve"
@@ -276,6 +277,45 @@
          height="570.31635"
          x="19.71464"
          y="78.858482" />
+      <rect
+         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.28693;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1-8-3-1-3-9-7-8"
+         width="15.082744"
+         height="16.127378"
+         x="696.54041"
+         y="287.68158"
+         inkscape:tile-cx="79.103313"
+         inkscape:tile-cy="328.58105"
+         inkscape:tile-w="20.110324"
+         inkscape:tile-h="21.50317"
+         inkscape:tile-x0="69.048151"
+         inkscape:tile-y0="317.82946" />
+      <rect
+         style="fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.28693;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1-8-3-1-3-9-7-8-3"
+         width="15.082744"
+         height="16.127378"
+         x="696.54718"
+         y="307.49994"
+         inkscape:tile-cx="79.103313"
+         inkscape:tile-cy="328.58105"
+         inkscape:tile-w="20.110324"
+         inkscape:tile-h="21.50317"
+         inkscape:tile-x0="69.048151"
+         inkscape:tile-y0="317.82946" />
+      <rect
+         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.28693;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1-8-3-1-3-9-7-8-3-5"
+         width="15.082744"
+         height="16.127378"
+         x="696.53534"
+         y="326.32379"
+         inkscape:tile-cx="79.103313"
+         inkscape:tile-cy="328.58105"
+         inkscape:tile-w="20.110324"
+         inkscape:tile-h="21.50317"
+         inkscape:tile-x0="69.048151"
+         inkscape:tile-y0="317.82946" />
     </g>
   </g>
 </svg>
