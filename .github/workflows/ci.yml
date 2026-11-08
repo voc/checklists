@@ -40,6 +40,10 @@ jobs:
             fi
           done
 
+          for file in svg/*.svg; do
+            inkscape --export-area-page --export-type 'jpg' "$file"
+          done
+
           # If any build failed, show logs and exit nonzero
           if [ "$BUILD_FAILED" -ne 0 ]; then
             echo "One or more builds failed — dumping build logs:"
@@ -69,7 +73,7 @@ jobs:
           mkdir -p _pages/pdf/
           mkdir -p _pages/svg/
           cp pdf/*.pdf _pages/pdf/
-          cp svg/*.svg _pages/svg/
+          cp svg/* _pages/svg/
 
           # create a simple index.html to link to the PDFs
           echo "<!DOCTYPE html><html><head><meta charset='utf-8'><title>Checklists</title></head><body><h1>Checklists</h1><ul>" > _pages/index.html
@@ -80,7 +84,7 @@ jobs:
             echo "<li><a href='pdf/$base'>$base</a></li>" >> _pages/index.html
           done
           echo "</ul><h2>SVGs</h2><ul>" >> _pages/index.html
-          for svg in svg/*.svg; do
+          for svg in svg/*; do
             base=$(basename "$svg")
             echo "<li><a href='svg/$base'>$base</a></li>" >> _pages/index.html
           done
