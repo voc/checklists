@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt update
-          apt install -y inkscape
+          apt install -y inkscape python3-tinycss2
 
       - name: Build PDFs
         run: |
