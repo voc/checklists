@@ -140,15 +140,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="16.688686"
-     inkscape:cx="1368.1724"
-     inkscape:cy="441.73638"
+     inkscape:zoom="0.84554805"
+     inkscape:cx="387.91409"
+     inkscape:cy="981.61187"
      inkscape:window-width="1920"
      inkscape:window-height="1073"
      inkscape:window-x="0"
      inkscape:window-y="39"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1"
+     inkscape:current-layer="use40"
      inkscape:document-units="mm"
      showguides="false"
      inkscape:export-bgcolor="#ffffffff">
@@ -460,7 +460,7 @@
            inkscape:tile-y0="987.56027"
            transform="matrix(2.7011009,0,0,2.7011009,-29.26189,-492.79153)">
           <rect
-             style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.41732;stroke-dasharray:none;stroke-opacity:1"
+             style="fill:#edcc00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.41732;stroke-dasharray:none;stroke-opacity:1"
              id="rect47"
              width="15.082744"
              height="16.127378"
