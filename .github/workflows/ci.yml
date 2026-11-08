@@ -48,6 +48,7 @@ jobs:
           for file in svg/*.svg; do
             base=$(basename "$file" .svg)
             inkscape --export-area-page --export-filename "svg/${base}.png" --export-background="#ffffff" --export-background-opacity=1 "$file"
+            inkscape --export-area-page --export-filename "svg/${base}.pdf" "$file"
             magick "svg/${base}.png" "svg/${base}.jpg"
           done
 
