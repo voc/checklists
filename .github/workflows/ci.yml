@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt update
-          apt install -y inkscape python3-tinycss2
+          apt install -y inkscape python3-tinycss2 imagemagick
 
       - name: Build PDFs
         run: |
@@ -46,7 +46,9 @@ jobs:
           done
 
           for file in svg/*.svg; do
-            inkscape --export-area-page --export-type 'jpg' "$file"
+            base=$(basename "$file" .svg)
+            inkscape --export-area-page --export-filename "svg/${file}.png" --export-background="#ffffff" --export-background-opacity=1 "$file"
+            magick "svg/${file}.png" "svg/${file}.jpg"
           done
 
           # If any build failed, show logs and exit nonzero
