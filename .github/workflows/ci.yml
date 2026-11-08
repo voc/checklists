@@ -21,8 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo apt update
-          sudo apt install -y inkscape
+          apt update
+          apt install -y inkscape
 
       - name: Build PDFs
         run: |
